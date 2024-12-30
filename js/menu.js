@@ -25,3 +25,18 @@ buttons.forEach((button) => {
     button.classList.remove("hover");
   });
 });
+
+// Animação Balões
+
+document.addEventListener("DOMContentLoaded", () => {
+  const baloes = document.querySelectorAll(".balao");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animado");
+      }
+    });
+  });
+
+  baloes.forEach((el) => observer.observe(el));
+});
