@@ -84,7 +84,6 @@
   outline: none;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  text-align: justify;
 }
 .flex {
   display: flex;
@@ -133,9 +132,9 @@ h4 {
 }
 p {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 
-  font-size: 16px;
+  font-size: 20px;
 }
 h6 {
   font-family: "Roboto", sans-serif;
@@ -379,7 +378,7 @@ section.topo-do-site .txt-topo-do-site h4 {
     top: 0;
   }
   50% {
-    top: 30px;
+    top: 50px;
   }
   100% {
     top: 0;
@@ -400,15 +399,33 @@ section.especialidades .flex {
   border-radius: 15px;
   margin-top: 40px;
   box-shadow: 0px 5px 10px 0px#80808063;
+  transition: 0.4s;
+  max-height: 250px;
+  width: 33%;
+  overflow: hidden;
 }
+.especialidades .especialidades-box p {
+  visibility: hidden;
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 0;
+  transition: 0.8s;
+}
+
 .especialidades .especialidades-box:hover {
   color: var(--corfundoclaro);
   background-color: #a99de7;
   transition: 0.2s;
+  max-height: none;
+  width: 200%;
   transform: scale(1.05);
-  box-shadow: 0px 5px 10px 0px#80808063;
+  box-shadow: 0px 5px 10px 0px #80808063;
   i {
     color: var(--corfundoclaro);
+  }
+  p {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .especialidades .especialidades-box i {
@@ -510,6 +527,78 @@ section.portifolio .flex {
 section.formulario {
   padding: 80px 4%;
 }
+.form {
+  background-image: linear-gradient(to bottom, #ffffffc0, #f8f4e9c2);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 5px 5px 1px rgba(128, 128, 128, 0.346);
+  max-width: 500px;
+  margin: 0 6% 0 0%;
+  width: 55%;
+}
+.input-text {
+  position: relative;
+  margin: 20px 0;
+}
+.input-text label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.3s;
+  cursor: text;
+}
+.input {
+  width: 100%;
+  background-color: #f8f4e900;
+  border: 0;
+  border-bottom: 2px solid #a99de7;
+  padding: 5px;
+  font-size: 20px;
+  font-family: "Noto Serif Display", serif;
+  outline: 0;
+  color: var(--cortexto);
+}
+
+form .input-text .input:focus ~ label,
+form .input-text .input:valid ~ label {
+  transform: translateY(-28px);
+  font-size: 12px;
+  color: #a99de7dd;
+}
+label {
+  color: #a99de7;
+}
+
+.input-msg {
+  position: relative;
+  margin: 20px 0;
+}
+.input-msg label {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  transition: all 0.3s;
+  cursor: text;
+}
+
+.cxtexto {
+  width: 100%;
+  background-color: #f8f4e900;
+  border: 0;
+  border-bottom: 2px solid #a99de7;
+  padding: 5px;
+  font-size: 20px;
+  font-family: "Noto Serif Display", serif;
+  outline: 0;
+  color: var(--cortexto);
+}
+
+form .input-msg .cxtexto:focus ~ label,
+form .input-msg .cxtexto:invalid ~ label {
+  transform: translateY(-65px);
+  font-size: 12px;
+  color: #a99de7dd;
+}
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -518,25 +607,9 @@ form {
   flex-direction: column;
   gap: 20px;
 }
-form input,
-textarea {
-  width: 100%;
-  background-color: white;
-  font-family: "Noto Serif Display", serif;
-  font-size: 16px;
-  box-shadow: 1px 5px 5px 1px rgba(128, 128, 128, 0.346);
-  border: 0;
-  outline: 0;
-  padding: 20px 10px;
-  border-radius: 15px;
-  color: var(--cortexto);
-}
-form ::placeholder {
-  color: var(--corlilas);
-}
+
 textarea {
   resize: none;
-  max-height: 200px;
 }
 form .btn-enviar {
   margin: 20px auto;
@@ -560,6 +633,48 @@ form .btn-enviar input:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
+/* Estilizar Baloes */
+.flex-baloes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+.balao {
+  position: relative;
+
+  opacity: 0;
+  transition: 1.5s;
+  background-image: linear-gradient(to bottom, #ffffffc0, #f8f4e9c2);
+  overflow: hidden;
+  border-radius: 20px 20px 0 20px;
+  padding: 40px;
+  box-shadow: 1px 5px 5px 1px rgba(128, 128, 128, 0.346);
+  max-width: 500px;
+  margin: 0 auto 0 6%;
+  transform: translateY(-200px);
+  transform: translateX(520px);
+}
+.balao.animado {
+  opacity: 1;
+  transform: translateY(0px);
+  transform: translateX(0px);
+}
+.txtbalao p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.coribalao {
+  border-radius: 0px 0px 0px 30px;
+  padding: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #a99de7;
+  color: #f8f4e9;
+}
+
 /* Estilo Footer */
 footer {
   padding: 40px 4%;
@@ -594,22 +709,22 @@ footer .flex {
   }
   h3 {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 18px;
+    font-size: 24px;
+    line-height: 24px;
   }
   h4 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 18px;
   }
   p {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 20px;
   }
   h6 {
     font-weight: 300;
     font-size: 12px;
   }
-  br {
+  #logo {
     display: none;
   }
 
@@ -731,8 +846,8 @@ footer .flex {
     align-items: center;
   }
   .especialidades .especialidades-box {
-    max-width: 300px;
-    max-height: 350px;
+    max-width: 90%;
+    width: 100%;
   }
   .especialidades .especialidades-box .hover-effect:hover {
     color: var(--corfundoclaro);
