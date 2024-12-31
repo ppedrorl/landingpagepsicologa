@@ -1,20 +1,41 @@
 <?php
 
-    $nome = addslashes($_POST['caixanome']);
-    $email = addslashes($_POST['caixaemail']);
-    $telefone = addslashes($_POST['caixatelefone']);
-    $mensagem = addcslashes($_POST['caixamensagem']);
+// Sanitização dos dados recebidos
+$nome = htmlspecialchars(trim($_POST['caixanome']));
+$email = htmlspecialchars(trim($_POST['caixaemail']));
+$telefone = htmlspecialchars(trim($_POST['caixatelefone']));
+$mensagem = htmlspecialchars(trim($_POST['caixamensagem']));
 
-    $destino = "pedropatamon@gmail.com";
-    $assunto = "Dados dos Leads - LandingPage"
+// Validação de campos obrigatórios
+if(empty($nome) || empty($email) || empty($telefone) || empty($mensagem)) {
+    echo "Por favor, preencha todos os campos obrigatórios.";
+    exit;
+}
 
-    $body = "Nome: ".$nome."\n"."E-mail: ".$email."\n"."Telefone: ".$telefone."\n"."Mensagem: ".$mensagem;
+// Validação de formato de e-mail
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Por favor, insira um e-mail válido.";
+    exit;
+}
 
-    $cabecalho = "From pedropatamon@gmail.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:PHP/".phpversion();
+// Configuração do e-mail
+$destino = "pedropatamon@gmail.com";
+$assunto = "Dados dos Leads - Landing Page";
 
-    if(mail($destino, $assunto, $body, $cabecalho)){
-        echo("E-mail enviado com SUCESSO!!");
-    }else{
-        echo("Houve um erro ao enviar o e-mail!!");
-    }
+$body = "Nome: $nome\n";
+$body .= "E-mail: $email\n";
+$body .= "Telefone: $telefone\n";
+$body .= "Mensagem: $mensagem\n";
+
+$cabecalho = "From: pedropatamon@gmail.com\r\n";
+$cabecalho .= "Reply-To: $email\r\n";
+$cabecalho .= "X-Mailer: PHP/" . phpversion();
+
+// Envio do e-mail
+if(mail($destino, $assunto, $body, $cabecalho)) {
+    echo "E-mail enviado com SUCESSO!";
+} else {
+    echo "Houve um erro ao enviar o e-mail. Tente novamente mais tarde.";
+}
+
 ?>

@@ -910,4 +910,17 @@ footer .flex {
   .img-port .hover-effect:hover {
     background-position: 100% 100%;
   }
+
+  /* Formulário */
+  #flexform {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .form {
+    width: 100%;
+    margin: auto;
+  }
+  .balao {
+    transform: translateX(250px);
+  }
 }
