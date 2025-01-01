@@ -90,7 +90,7 @@
 }
 
 :root {
-  --corlilas: #6a1b9a;
+  --corlilas: #c12b78;
   --cortexto: #37474f;
   --corcinzaclaro: #efe5d9;
   --corazulclaro: #d3eaf0;
@@ -143,7 +143,7 @@ h6 {
   font-size: 12px;
 }
 a {
-  color: #6a1b9a;
+  color: #c12b78;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -165,7 +165,7 @@ span {
   margin: 15px 0;
 }
 body {
-  background-color: wheat;
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(100px);
@@ -219,7 +219,7 @@ body {
   font-family: "Birthstone", cursive;
   font-size: 48px;
   padding: 5px 15px;
-  color: #6a1b9a;
+  color: #c12b78;
   line-height: 40px;
   transition: 0.2s;
 }
@@ -278,7 +278,7 @@ header .menu-desktop nav ul li {
 /* Estilo Menu Mobile */
 .btn-abrir i {
   display: none;
-  color: #6a1b9a;
+  color: #c12b78;
   font-size: 38px;
   transition: 0.3s;
 }
@@ -288,7 +288,7 @@ header .menu-desktop nav ul li {
 .overlay-menu {
   background-color: #efe5d9a2;
   width: 100%;
-  height: 100%;
+  height: 1000px;
   position: fixed;
   top: 0;
   right: 0;
@@ -297,7 +297,7 @@ header .menu-desktop nav ul li {
   transition: 1s;
 }
 .menu-mobile {
-  background-color: #691b9a8a;
+  background-color: #c12b79b1;
   height: 100%;
   box-shadow: rgba(2, 2, 2, 0.24) 1px 5px 5px 1px;
   width: 100%;
@@ -314,8 +314,10 @@ header .menu-desktop nav ul li {
 }
 .menu-mobile.abrir-menu-mobile {
   top: 0;
+  display: block;
 }
-.menu-mobile.abrir-menu-mobile ~ .overlay-menu {
+
+.overlay-menu.abrir-menu-mobile {
   display: block;
 }
 
@@ -331,7 +333,7 @@ header .menu-desktop nav ul li {
 .menu-mobile nav ul li:hover {
   box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.311);
   transform: scale(1.1);
-  background-color: #6a1b9ac0;
+  background-color: #c12b78c0;
 }
 .btn-fechar {
   font-size: 25px;
@@ -543,7 +545,7 @@ section.portifolio .flex {
 .img-port {
   width: 360px;
   height: 460px;
-  background-color: #6a1b9a;
+  background-color: #c12b78;
   background-size: cover;
   background-position: 100% 0%;
   border-radius: 30px;
@@ -618,7 +620,7 @@ section.formulario {
   width: 100%;
   background-color: #f8f4e900;
   border: 0;
-  border-bottom: 2px solid #6a1b9a;
+  border-bottom: 2px solid #c12b78;
   padding: 5px;
   font-size: 20px;
   font-family: "Noto Serif Display", serif;
@@ -630,10 +632,10 @@ form .input-text .input:focus ~ label,
 form .input-text .input:valid ~ label {
   transform: translateY(-28px);
   font-size: 12px;
-  color: #6a1b9add;
+  color: #c12b78dd;
 }
 label {
-  color: #6a1b9a;
+  color: #c12b78;
 }
 
 .input-msg {
@@ -652,7 +654,7 @@ label {
   width: 100%;
   background-color: #f8f4e900;
   border: 0;
-  border-bottom: 2px solid #6a1b9a;
+  border-bottom: 2px solid #c12b78;
   padding: 5px;
   font-size: 20px;
   font-family: "Noto Serif Display", serif;
@@ -663,7 +665,7 @@ form .input-msg .cxtexto:not(:placeholder-shown) ~ label,
 form .input-msg .cxtexto:focus ~ label {
   transform: translateY(-65px);
   font-size: 12px;
-  color: #6a1b9add;
+  color: #c12b78dd;
 }
 
 #flexform {
@@ -734,7 +736,7 @@ form .btn-enviar input:hover {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #6a1b9a;
+  background-color: #c12b78;
   color: #f8f4e9;
 }
 
@@ -846,7 +848,7 @@ footer .flex {
     font-family: "Birthstone", cursive;
     font-size: 38px;
     padding: 5px 15px;
-    color: #6a1b9a;
+    color: #c12b78;
     transition: 0.3s;
     line-height: 40px;
   }
@@ -927,7 +929,7 @@ footer .flex {
   }
   .especialidades .especialidades-box .hover-effect:hover {
     color: var(--corfundoclaro);
-    background-color: #6a1b9a;
+    background-color: #c12b78;
     transition: 0.2s;
     transform: scale(1.05);
     box-shadow: 0px 5px 10px 0px#80808063;

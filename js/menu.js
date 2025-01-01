@@ -4,15 +4,18 @@ let overlay = document.getElementById("overlay-menu");
 
 function toggleExpand() {
   navega.classList.toggle("abrir-menu-mobile");
+  overlay.classList.toggle("abrir-menu-mobile");
 }
 btnMenu.addEventListener("click", toggleExpand);
 
 navega.addEventListener("click", () => {
   navega.classList.remove("abrir-menu-mobile");
+  overlay.classList.remove("abrir-menu-mobile");
 });
 
 overlay.addEventListener("click", () => {
   navega.classList.remove("abrir-menu-mobile");
+  overlay.classList.remove("abrir-menu-mobile");
 });
 
 const buttons = document.querySelectorAll(".hover-effect");
