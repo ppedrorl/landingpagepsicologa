@@ -188,10 +188,10 @@
       </section>
       <!--especialidades-->
 
-      <section class="sobre" id="sobre">
-        <div class="interface">
-          <div class="flex" id="flexsobre">
-            <div class="img-sobre">
+      <section class="sectionsobre" id="sobre">
+        <div class="interface sobre">
+          <div class="flex sobre" id="flexsobre">
+            <div class="img-sobre sobre">
               <img
                 id="img-sobre"
                 src="img/fotokat2.jpg"
@@ -200,34 +200,35 @@
             </div>
             <!--imd-sobre-->
             <div class="txt-sobre">
-              <h2>Olá! Sou <span>Kàtylla Martins.</span></h2>
-              <p>
+              <h2 class="sobre">Olá! Sou <span>Kàtylla Martins.</span></h2>
+              <p class="sobre">
                 Psicóloga (CRP 09/20128) e atuo com a abordagem psicanalítica.
                 Atendo adolescentes e adultos, tanto presencialmente quanto
                 online, com foco em autoconhecimento e relacionamentos.
               </p>
-              <p>
+              <p class="sobre">
                 Acredito que cada pessoa carrega uma história única, e meu
                 compromisso é oferecer um espaço acolhedor e seguro para que
                 você possa se expressar livremente, compreendendo suas emoções e
                 construindo caminhos mais saudáveis para sua vida.
               </p>
-              <p>
+              <p class="sobre">
                 Seja para lidar com desafios emocionais, crises nos
                 relacionamentos ou para mergulhar em um processo de
                 autodescoberta, estou aqui para te acompanhar nessa jornada.
               </p>
-              <p>
-                <span>Vamos começar?</span> <br />
+              <p class="sobre">
+                <span class="sobre">Vamos começar?</span> <br />
                 Entre em contato e agende seu
                 <a
+                  class="sobre"
                   target="_blank"
                   href="https://api.whatsapp.com/send?phone=556293239511&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20minha%20primeira%20primeira%20consulta."
                   >primeiro atendimento.</a
                 >
               </p>
 
-              <div class="btn-social">
+              <div class="sobre btn-social">
                 <a
                   target="_blank"
                   href="https://www.instagram.com/katyllamartinss?igsh=N3JqaGNkdzEwdXhq"
@@ -326,8 +327,12 @@
       <section class="formulario" id="formulario">
         <div class="interface">
           <div class="flex" id="flexform">
-            <div class="form">
-              <form method="post" action="pastaphp/envia.php">
+            <div class="form balao">
+              <form
+                class="form formulario"
+                method="post"
+                action="pastaphp/envia.php"
+              >
                 <h2 class="titulo"><span>Fale</span> Comigo!</h2>
                 <div class="input-text">
                   <input
@@ -376,7 +381,7 @@
               </form>
             </div>
             <div class="flex-baloes">
-              <div class="balao">
+              <div class="frases balao">
                 <div class="txtbalao">
                   <p>
                     "Se aprende em psicanálise que muitas vezes, é preciso tempo
@@ -388,7 +393,7 @@
                   </div>
                 </div>
               </div>
-              <div class="balao">
+              <div class="frases balao">
                 <div class="txtbalao">
                   <p>
                     "O desejo do homem encontra seu sentido no desejo do outro,
@@ -401,7 +406,7 @@
                   </div>
                 </div>
               </div>
-              <div class="balao">
+              <div class="frases balao">
                 <div class="txtbalao">
                   <p>
                     "A angústia surge do momento em que o sujeito está suspenso

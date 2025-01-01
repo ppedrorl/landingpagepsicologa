@@ -40,3 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   baloes.forEach((el) => observer.observe(el));
 });
+
+// Animação Sobre
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sobre = document.querySelectorAll(".sobre");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animado");
+      }
+    });
+  });
+
+  sobre.forEach((el) => observer.observe(el));
+});
