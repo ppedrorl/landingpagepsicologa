@@ -27,7 +27,7 @@ if(!preg_match('/^\d{8,15}$/', $telefone)) {
 }
 
 // Configuração do e-mail
-$destino = "pedropatamon@gmail.com";
+$destino = "Katyllagomespsi@gmail.com";
 $assunto = "Dados dos Leads - Landing Page";
 
 $body = "Nome: $nome\n";
@@ -35,7 +35,7 @@ $body .= "E-mail: $email\n";
 $body .= "Telefone: $telefone\n";
 $body .= "Mensagem: $mensagem\n";
 
-$cabecalho = "From: pedropatamon@gmail.com\r\n";
+$cabecalho = "From: Katyllagomespsi@gmail.com\r\n";
 $cabecalho .= "Reply-To: $email\r\n";
 $cabecalho .= "X-Mailer: PHP/" . phpversion();
 
