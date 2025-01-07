@@ -714,7 +714,7 @@ form .btn-enviar input:hover {
   opacity: 0;
   transition: 1.5s;
   overflow: hidden;
-  transform: translateX(520px);
+  transform: translateX(350px);
 }
 .balao.animado {
   opacity: 1;
