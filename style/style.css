@@ -543,7 +543,7 @@ section.portifolio .flex {
 }
 .img-port {
   width: 360px;
-  height: 460px;
+  height: 400px;
   background-color: var(--corlilas);
   background-size: cover;
   background-position: 100% 0%;
